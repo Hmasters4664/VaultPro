@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "168963958588",
+    "firebase_url": "https://vault-20e2d.firebaseio.com",
+    "project_id": "vault-20e2d",
+    "storage_bucket": "vault-20e2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168963958588:android:6e41f5020f14d13a896039",
+        "android_client_info": {
+          "package_name": "com.example.ecryptiontest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168963958588-dg5u5rfhq7jrkbdr8raf9qtmuboh4ck7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCWznalPjTTZDgzHt2GZWBrIjzt91204g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168963958588-dg5u5rfhq7jrkbdr8raf9qtmuboh4ck7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168963958588:android:6419576c3407629b896039",
+        "android_client_info": {
+          "package_name": "com.example.vaultpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168963958588-dg5u5rfhq7jrkbdr8raf9qtmuboh4ck7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCWznalPjTTZDgzHt2GZWBrIjzt91204g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168963958588-dg5u5rfhq7jrkbdr8raf9qtmuboh4ck7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
