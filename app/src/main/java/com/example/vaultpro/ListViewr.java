@@ -18,6 +18,7 @@ import com.example.vaultpro.Adapters.PasswordAdapter;
 import com.example.vaultpro.objects.Password;
 import com.example.vaultpro.objects.SharedPrefManager;
 import com.example.vaultpro.touchlisteners.RecyclerTouchListener;
+import android.widget.PopupMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import net.sqlcipher.Cursor;
@@ -98,28 +99,61 @@ public class ListViewr extends base {
         mrecyler.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mrecyler, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Intent intent = new Intent(ListViewr.this, PasswordCreation.class);
+               /* Intent intent = new Intent(ListViewr.this, PasswordCreation.class);
                 intent.putExtra("category",category);
                 intent.putExtra("password", passwords);
                 intent.putExtra("id", PList.get(position).getRowid());
                 intent.putExtra("edit",true );
                 startActivity(intent);
-                finish();
+                finish();*/
             }
 
             @Override
             public void onLongClick(View view, int position) {
-                Toast.makeText(ListViewr.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
-                String pass  = PList.get(position).getPassword();
-                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("password", pass);
-                assert clipboard != null;
-                clipboard.setPrimaryClip(clip);
+                final String pass  = PList.get(position).getPassword();
+                PopupMenu popup = new PopupMenu(ListViewr.this, view);
+                popup.getMenuInflater().inflate(R.menu.pop_up, popup.getMenu());
+
+                //registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        String choice = item.getTitle().toString();
+                        switch (choice) {
+                            case "Copy to Clipboard":
+                                clipboard(pass);
+                                return true;
+                            case "Push to Browser":
+                                newapp();
+                                return true;
+                            default:
+                                return false;
+                        }
+                    }
+                });
+
+                popup.show();//showing popup menu
+
+
+
 
             }
         }));
 
 
+    }
+    private void clipboard(String pass)
+    {
+        Toast.makeText(ListViewr.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("password", pass);
+        assert clipboard != null;
+        clipboard.setPrimaryClip(clip);
+    }
+
+    private void newapp()
+    {
+        Toast.makeText(ListViewr.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
     }
     private void initializePass()
     {

@@ -37,9 +37,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:168963958588:android:6419576c3407629b896039",
+        "mobilesdk_app_id": "1:168963958588:android:4e7a4b066806f131896039",
         "android_client_info": {
-          "package_name": "com.example.vaultpro"
+          "package_name": "com.gttg.vaultpro"
         }
       },
       "oauth_client": [
