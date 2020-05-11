@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="names">
+        <item>white</item>
+        <item>Orange1</item>
+        <item>Orange2</item>
+        <item>Light Blue</item>
+        <item>Blue</item>
+        <item>Light Green</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Lilac</item>
+    </string-array>
+
+
+    <array name="colours">
+        <item>#660066</item>
+        <item>#000000</item>
+        <item>#FB0000</item>
+        <item>#11c612</item>
+        <item>#a369ff</item>
+        <item>#0e56ff</item>
+        <item>#3700B3</item>
+        <item>#f87b05</item>
+        <item>#ffa500</item>
+    </array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+
+    <string-array name="generation">
+        <item>@string/lowercase</item>
+        <item>Lowercase and Uppercase</item>
+        <item>Lowercase and Uppercase and </item>
+    </string-array>
+
+    <string-array name="themes">
+        <item>AppTheme</item>
+        <item>Night</item>
+        <item>Orange</item>
+        <item>Pink</item>
+    </string-array>
+
+</resources>
