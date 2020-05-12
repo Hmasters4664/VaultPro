@@ -1658,6 +1658,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id bt_barcode
 id button
 id buttonPanel
 id button_cancel_user_data
@@ -1871,6 +1872,7 @@ id strength
 id stretch
 id submenuarrow
 id submit_area
+id sv_barcode
 id switchWidget
 id tabMode
 id tag_accessibility_actions
@@ -1910,6 +1912,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_barcode
 id two
 id unchecked
 id uniform
@@ -1994,6 +1997,7 @@ layout activity_password_creation
 layout activity_register
 layout activity_register1
 layout activity_settings
+layout activity_snap
 layout category_card
 layout custom_dialog
 layout custom_spinner

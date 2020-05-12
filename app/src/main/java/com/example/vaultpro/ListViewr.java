@@ -123,7 +123,7 @@ public class ListViewr extends base {
                                 clipboard(pass);
                                 return true;
                             case "Push to Browser":
-                                newapp();
+                                newapp(pass);
                                 return true;
                             default:
                                 return false;
@@ -151,9 +151,11 @@ public class ListViewr extends base {
         clipboard.setPrimaryClip(clip);
     }
 
-    private void newapp()
+    private void newapp(String Password)
     {
-        Toast.makeText(ListViewr.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getBaseContext(), Snap.class);
+        i.putExtra("password", Password);
+        startActivity(i);
     }
     private void initializePass()
     {

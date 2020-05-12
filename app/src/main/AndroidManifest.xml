@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vaultpro">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon_true"
@@ -11,10 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".register1"></activity>
+        <activity android:name=".Snap"></activity>
+        <activity android:name=".register1" />
         <activity
             android:name=".Settings"
             android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="com.google.android.gms.vision.DEPENDENCIES"
+                android:value="barcode" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
