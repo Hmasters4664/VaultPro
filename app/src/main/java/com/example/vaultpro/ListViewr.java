@@ -78,7 +78,6 @@ public class ListViewr extends base {
                         intent.putExtra("password", passwords);
                         intent.putExtra("edit",false );
                         startActivity(intent);
-                        finish();
 
                         break;
                     case R.id.settings:
@@ -99,13 +98,12 @@ public class ListViewr extends base {
         mrecyler.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mrecyler, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-               /* Intent intent = new Intent(ListViewr.this, PasswordCreation.class);
+                Intent intent = new Intent(ListViewr.this, PasswordCreation.class);
                 intent.putExtra("category",category);
                 intent.putExtra("password", passwords);
                 intent.putExtra("id", PList.get(position).getRowid());
                 intent.putExtra("edit",true );
                 startActivity(intent);
-                finish();*/
             }
 
             @Override
