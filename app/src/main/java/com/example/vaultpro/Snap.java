@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Canvas;
@@ -50,6 +51,7 @@ import javax.crypto.spec.PBEKeySpec;
 
 public class Snap extends AppCompatActivity {
     private String password;
+    private String user;
     private Button btn;
     private TextView txt;
     private SurfaceView sfv;
@@ -73,6 +75,8 @@ public class Snap extends AppCompatActivity {
         if(extras !=null)
         {
             password = extras.getString("password");
+            user = extras.getString("user");
+
 
         } else{
             Intent intent = new Intent(Snap.this, register.class);
@@ -195,9 +199,16 @@ public class Snap extends AppCompatActivity {
         Map<String, Object> docData = new HashMap<>();
         docData.put("Password", t);
         docData.put("URL", "CA");
+        docData.put("username", user);
         docData.put("seconds", time);
         db.collection("browsers").document(location).set(docData);
         txt.setText(" ");
+
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("location",part1);
+        returnIntent.putExtra("key",part2);
+        setResult(Activity.RESULT_OK,returnIntent);
+        finish();
     }
 
 

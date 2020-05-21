@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 
@@ -38,6 +39,7 @@ public class ListViewr extends base {
     private RecyclerView mrecyler;
     private LinearLayoutManager linear;
     private static final String TAG="ERROR";
+    int LAUNCH_SECOND_ACTIVITY = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,9 +154,11 @@ public class ListViewr extends base {
 
     private void newapp(String Password,String User)
     {
+
         Intent i = new Intent(getBaseContext(), Snap.class);
         i.putExtra("password", Password);
-        startActivity(i);
+        i.putExtra("user", User);
+        startActivityForResult(i, LAUNCH_SECOND_ACTIVITY);
     }
     private void initializePass()
     {
@@ -217,5 +221,19 @@ public class ListViewr extends base {
             category = extras.getString("category");
         }
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == LAUNCH_SECOND_ACTIVITY) {
+            if(resultCode == Activity.RESULT_OK){
+                String result=data.getStringExtra("result");
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
     }
 }
