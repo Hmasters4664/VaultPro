@@ -109,6 +109,7 @@ public class ListViewr extends base {
             @Override
             public void onLongClick(View view, int position) {
                 final String pass  = PList.get(position).getPassword();
+                final String usr  = PList.get(position).getUsername();
                 PopupMenu popup = new PopupMenu(ListViewr.this, view);
                 popup.getMenuInflater().inflate(R.menu.pop_up, popup.getMenu());
 
@@ -121,7 +122,7 @@ public class ListViewr extends base {
                                 clipboard(pass);
                                 return true;
                             case "Push to Browser":
-                                newapp(pass);
+                                newapp(pass,usr);
                                 return true;
                             default:
                                 return false;
@@ -149,7 +150,7 @@ public class ListViewr extends base {
         clipboard.setPrimaryClip(clip);
     }
 
-    private void newapp(String Password)
+    private void newapp(String Password,String User)
     {
         Intent i = new Intent(getBaseContext(), Snap.class);
         i.putExtra("password", Password);

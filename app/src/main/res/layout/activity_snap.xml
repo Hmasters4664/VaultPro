@@ -9,8 +9,8 @@
 
     <SurfaceView
         android:id="@+id/sv_barcode"
-        android:layout_width="357dp"
-        android:layout_height="277dp"
+        android:layout_width="320dp"
+        android:layout_height="273dp"
         app:layout_constraintBottom_toTopOf="@+id/bt_barcode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +37,7 @@
         android:id="@+id/bt_barcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SCAN"
-
+        android:text="@string/send_password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

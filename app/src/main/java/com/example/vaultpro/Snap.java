@@ -57,6 +57,9 @@ public class Snap extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private String TAG="Error";
+    String part1 = "";
+    String part2 = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,7 @@ public class Snap extends AppCompatActivity {
         txt = findViewById(R.id.tv_barcode);
         sfv = findViewById(R.id.sv_barcode);
         Bundle extras = getIntent().getExtras();
+        btn.setEnabled(false);
         if(extras !=null)
         {
             password = extras.getString("password");
@@ -102,6 +106,12 @@ public class Snap extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         setUP();
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transmit(part1,part2);
+            }
+        });
 
     }
 
@@ -165,10 +175,11 @@ public class Snap extends AppCompatActivity {
                     String code = codes.valueAt(0).displayValue;
                     String[] parts = code.split("-");
                     if(parts.length>0) {
-                        String part1 = parts[0];
-                        String part2 = parts[1];
-                        transmit(part1,part2);
-                        txt.setText("Done");
+                         part1 = parts[0];
+                         part2 = parts[1];
+                        txt.setText("Scan complete");
+                        btn.setEnabled(true);
+
                     }
                 }
 
@@ -178,17 +189,15 @@ public class Snap extends AppCompatActivity {
 
    void transmit(String location, String Password)
     {
-        String  key="724af3e12cdcc75b50cfdca97aa9cf1fa1be5b3d95f16eabe02062570cbfb";
         String t;
-
         t=Encrypt(Password,password);
         long time= System.currentTimeMillis();
         Map<String, Object> docData = new HashMap<>();
         docData.put("Password", t);
         docData.put("URL", "CA");
         docData.put("seconds", time);
-        db.collection("browsers").document("3082414a5d4ede1f5e61f26329ab53916f1eb2b5226f924dddc232b98d1353").set(docData);
-
+        db.collection("browsers").document(location).set(docData);
+        txt.setText(" ");
     }
 
 

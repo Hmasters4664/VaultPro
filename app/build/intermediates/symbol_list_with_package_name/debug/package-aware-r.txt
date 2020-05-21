@@ -2253,7 +2253,9 @@ string project_id
 string reply_title
 string save
 string save_category
+string scan
 string search_menu_title
+string send_password
 string settings
 string signature_title
 string special_characters
