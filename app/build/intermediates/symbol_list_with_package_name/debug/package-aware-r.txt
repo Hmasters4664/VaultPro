@@ -1485,6 +1485,11 @@ drawable baseline_folder_shared_white_18
 drawable baseline_folder_shared_white_24
 drawable baseline_folder_shared_white_36
 drawable baseline_folder_shared_white_48
+drawable baseline_horizontal_split_24
+drawable baseline_horizontal_split_white_18
+drawable baseline_horizontal_split_white_24
+drawable baseline_horizontal_split_white_36
+drawable baseline_horizontal_split_white_48
 drawable baseline_library_add_24
 drawable baseline_library_add_white_18
 drawable baseline_library_add_white_24
@@ -1824,6 +1829,7 @@ id save
 id save_non_transition_alpha
 id save_overlay_view
 id scale
+id scan
 id screen
 id scroll
 id scrollIndicatorDown
@@ -1899,6 +1905,7 @@ id text_input_start_icon
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id three
 id tile
 id time
 id title
@@ -2095,6 +2102,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menu_four
 menu menu_three
 menu menu_two
 menu pop_up
@@ -2172,6 +2180,7 @@ string defualt_length
 string defualt_password_length
 string defualt_password_summary
 string delete
+string done
 string error_icon_content_description
 string exit
 string expand_button_title
@@ -2254,6 +2263,7 @@ string reply_title
 string save
 string save_category
 string scan
+string scan_browser
 string search_menu_title
 string send_password
 string settings

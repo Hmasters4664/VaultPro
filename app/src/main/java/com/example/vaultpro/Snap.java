@@ -72,17 +72,7 @@ public class Snap extends AppCompatActivity {
         sfv = findViewById(R.id.sv_barcode);
         Bundle extras = getIntent().getExtras();
         btn.setEnabled(false);
-        if(extras !=null)
-        {
-            password = extras.getString("password");
-            user = extras.getString("user");
 
-
-        } else{
-            Intent intent = new Intent(Snap.this, register.class);
-            startActivity(intent);
-            finish();
-        }
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
@@ -113,7 +103,7 @@ public class Snap extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                transmit(part1,part2);
+                transmit();
             }
         });
 
@@ -191,52 +181,13 @@ public class Snap extends AppCompatActivity {
         });
     }
 
-   void transmit(String location, String Password)
+   void transmit()
     {
-        String t;
-        t=Encrypt(Password,password);
-        long time= System.currentTimeMillis();
-        Map<String, Object> docData = new HashMap<>();
-        docData.put("Password", t);
-        docData.put("URL", "CA");
-        docData.put("username", user);
-        docData.put("seconds", time);
-        db.collection("browsers").document(location).set(docData);
-        txt.setText(" ");
-
         Intent returnIntent = new Intent();
         returnIntent.putExtra("location",part1);
         returnIntent.putExtra("key",part2);
         setResult(Activity.RESULT_OK,returnIntent);
         finish();
     }
-
-
-
-    String Encrypt(String key,String text)
-    {
-        try {
-            byte[] salt = new String("12345678").getBytes("Utf8");
-            int iterationCount = 2048;
-            int keyStrength = 256;
-            SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
-            KeySpec spec = new PBEKeySpec(key.toCharArray(), salt, iterationCount, keyStrength);
-            SecretKey tmp = factory.generateSecret(spec);
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            // encrypt the text
-            cipher.init(Cipher.ENCRYPT_MODE, tmp);
-            byte[] encrypted = cipher.doFinal(text.getBytes());
-            byte[] iv = cipher.getIV();
-
-            return Base64.encodeToString(encrypted,Base64.DEFAULT)+"_"+Base64.encodeToString(iv,Base64.DEFAULT);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-            return e.getMessage();
-        }
-    }
-
-
 
 }

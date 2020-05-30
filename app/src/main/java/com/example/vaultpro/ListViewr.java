@@ -10,6 +10,7 @@ import android.content.ClipboardManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,14 +21,29 @@ import com.example.vaultpro.objects.Password;
 import com.example.vaultpro.objects.SharedPrefManager;
 import com.example.vaultpro.touchlisteners.RecyclerTouchListener;
 import android.widget.PopupMenu;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.sqlcipher.Cursor;
 import net.sqlcipher.database.SQLiteDatabase;
 
 import java.io.File;
+import java.security.spec.KeySpec;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
 
 public class ListViewr extends base {
 
@@ -37,7 +53,12 @@ public class ListViewr extends base {
     private PasswordAdapter PassA;
     private List<Password> PList;
     private RecyclerView mrecyler;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
     private LinearLayoutManager linear;
+    private String location;
+    private String key;
+    private Boolean done;
     private static final String TAG="ERROR";
     int LAUNCH_SECOND_ACTIVITY = 1;
 
@@ -51,8 +72,10 @@ public class ListViewr extends base {
             finish();
 
         }
+        done=false;
 
         Bundle extras = getIntent().getExtras();
+        firebasesetup();
 
         if(extras !=null)
         {
@@ -124,8 +147,13 @@ public class ListViewr extends base {
                                 clipboard(pass);
                                 return true;
                             case "Push to Browser":
-                                newapp(pass,usr);
+                                transmit(pass,usr);
                                 return true;
+
+                            case "Scan browser barcode":
+                                newapp();
+                                return true;
+
                             default:
                                 return false;
                         }
@@ -142,6 +170,33 @@ public class ListViewr extends base {
 
 
     }
+
+    private void firebasesetup()
+    {
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user == null) {
+            mAuth.signInAnonymously()
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d(TAG, "signInAnonymously:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w(TAG, "signInAnonymously:failure", task.getException());
+                                Toast.makeText(ListViewr.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    });
+        }
+        db = FirebaseFirestore.getInstance();
+
+    }
     private void clipboard(String pass)
     {
         Toast.makeText(ListViewr.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
@@ -152,12 +207,10 @@ public class ListViewr extends base {
         clipboard.setPrimaryClip(clip);
     }
 
-    private void newapp(String Password,String User)
+    private void newapp()
     {
 
         Intent i = new Intent(getBaseContext(), Snap.class);
-        i.putExtra("password", Password);
-        i.putExtra("user", User);
         startActivityForResult(i, LAUNCH_SECOND_ACTIVITY);
     }
     private void initializePass()
@@ -229,11 +282,57 @@ public class ListViewr extends base {
 
         if (requestCode == LAUNCH_SECOND_ACTIVITY) {
             if(resultCode == Activity.RESULT_OK){
-                String result=data.getStringExtra("result");
+                location=data.getStringExtra("location");
+                key=data.getStringExtra("key");
+                done=true;
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 //Write your code if there's no result
+                done=false;
             }
         }
     }
+
+    void transmit(String Password, String user)
+    {
+        if(done) {
+            String t;
+            t = Encrypt(key, Password);
+            long time = System.currentTimeMillis();
+            Map<String, Object> docData = new HashMap<>();
+            docData.put("Password", t);
+            docData.put("URL", "CA");
+            docData.put("username", user);
+            docData.put("seconds", time);
+            db.collection("browsers").document(location).set(docData);
+        }else{
+            newapp();
+        }
+
+    }
+
+    String Encrypt(String key,String text)
+    {
+        try {
+            byte[] salt = new String("12345678").getBytes("Utf8");
+            int iterationCount = 2048;
+            int keyStrength = 256;
+            SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+            KeySpec spec = new PBEKeySpec(key.toCharArray(), salt, iterationCount, keyStrength);
+            SecretKey tmp = factory.generateSecret(spec);
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            // encrypt the text
+            cipher.init(Cipher.ENCRYPT_MODE, tmp);
+            byte[] encrypted = cipher.doFinal(text.getBytes());
+            byte[] iv = cipher.getIV();
+
+            return Base64.encodeToString(encrypted,Base64.DEFAULT)+"_"+Base64.encodeToString(iv,Base64.DEFAULT);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return e.getMessage();
+        }
+    }
+
 }
