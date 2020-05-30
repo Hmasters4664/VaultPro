@@ -15,18 +15,22 @@ import java.util.Date;
 
 public abstract class base extends AppCompatActivity {
 private long lastActivity;
+protected int icon;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-
+        //icon = 5;
         SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(this);
         String themeName = pref.getString("theme", "AppTheme");
         if (themeName.equals("Night")) {
             setTheme(R.style.Night);
+            icon=0;
         } else if (themeName.equals("Orange")) {
             setTheme(R.style.Orange);
+            icon=1;
         }else if (themeName.equals("Pink")) {
             setTheme(R.style.Pink);
+            icon=2;
         }else if (themeName.equals("AppTheme")) {
             setTheme(R.style.AppTheme);
         }

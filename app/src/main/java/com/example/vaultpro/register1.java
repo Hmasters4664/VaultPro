@@ -1,14 +1,18 @@
 package com.example.vaultpro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.preference.PreferenceManager;
 
 import com.example.vaultpro.objects.SharedPrefManager;
 import com.google.common.hash.Hasher;
@@ -30,11 +34,25 @@ public class register1 extends base {
     private SQLiteDatabase category;
     private String sh, sh2;
     private int counter;
+    private ImageView icn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register1);
+        icn =findViewById(R.id.imageView2);
+        SharedPreferences pref = PreferenceManager
+                .getDefaultSharedPreferences(this);
+        String themeName = pref.getString("theme", "AppTheme");
+        if (themeName.equals("Night")) {
+            icn.setImageResource(R.drawable.icon_dark);
+        } else if (themeName.equals("Orange")) {
+            icn.setImageResource(R.drawable.icon_orange);
+        }else if (themeName.equals("Pink")) {
+            icn.setImageResource(R.drawable.icon_pink);
+        }else if (themeName.equals("AppTheme")) {
+            icn.setImageResource(R.drawable.icon_true);
+        }
         password = findViewById(R.id.input_password);
         retype = findViewById(R.id.input_password_retype);
         textViewPasswordStrengthIndiactor = findViewById(R.id.strength);
