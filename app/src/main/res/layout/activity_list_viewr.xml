@@ -26,6 +26,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        app:menu="@menu/menu_three" />
+        app:menu="@menu/menu_two" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

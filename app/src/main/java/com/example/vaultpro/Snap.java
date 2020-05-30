@@ -61,17 +61,25 @@ public class Snap extends AppCompatActivity {
     private String TAG="Error";
     String part1 = "";
     String part2 = "";
-
+    final String[] PERMISSION = new String[] {"android.permission.CAMERA"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_snap);
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(PERMISSION, 0);
+
+            }
+        }
         btn = findViewById(R.id.bt_barcode);
         txt = findViewById(R.id.tv_barcode);
         sfv = findViewById(R.id.sv_barcode);
         Bundle extras = getIntent().getExtras();
         btn.setEnabled(false);
+
+
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -188,6 +196,31 @@ public class Snap extends AppCompatActivity {
         returnIntent.putExtra("key",part2);
         setResult(Activity.RESULT_OK,returnIntent);
         finish();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 0: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                } else {
+
+                    Toast.makeText(Snap.this, "Permission denied to use your camera", Toast.LENGTH_SHORT).show();
+                    Intent returnIntent = new Intent();
+                    setResult(Activity.RESULT_CANCELED,returnIntent);
+                    finish();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 
 }

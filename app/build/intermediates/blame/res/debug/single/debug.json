@@ -64,12 +64,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xhdpi\\baseline_folder_shared_white_36.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_note_add_white_36.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_note_add_white_36.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_chat_white_18.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-hdpi\\baseline_chat_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_note_add_white_36.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_note_add_white_36.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_chat_white_24.png.flat",
@@ -260,12 +260,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_note_add_white_18.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_folder_shared_white_18.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xhdpi\\baseline_folder_shared_white_18.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_horizontal_split_white_48.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_horizontal_split_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_folder_shared_white_18.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xhdpi\\baseline_folder_shared_white_18.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_settings_24.xml.flat",
@@ -280,12 +280,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_email_white_18.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_icon_true.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\icon_true.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_note_add_white_18.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_note_add_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_icon_true.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\icon_true.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -344,20 +344,20 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_exit_to_app_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_library_add_white_18.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_library_add_white_18.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_viewr.xml.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\layout\\activity_list_viewr.xml"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_horizontal_split_white_48.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_horizontal_split_white_48.png"
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_library_add_white_18.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_library_add_white_18.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon_pink.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\icon_pink.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_horizontal_split_white_48.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_horizontal_split_white_48.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_email_white_36.png.flat",
@@ -372,12 +372,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable\\baseline_attach_money_24.xml"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_exit_to_app_white_36.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_exit_to_app_white_36.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_horizontal_split_white_24.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-hdpi\\baseline_horizontal_split_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_exit_to_app_white_36.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_exit_to_app_white_36.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_attach_money_white_18.png.flat",
@@ -492,12 +492,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xhdpi\\baseline_settings_white_18.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_exit_to_app_white_36.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_exit_to_app_white_36.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_horizontal_split_24.xml.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable\\baseline_horizontal_split_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_exit_to_app_white_36.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_exit_to_app_white_36.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_library_add_white_18.png.flat",
@@ -572,12 +572,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-hdpi\\baseline_folder_shared_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_exit_to_app_white_24.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_exit_to_app_white_24.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_horizontal_split_white_36.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xhdpi\\baseline_horizontal_split_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_exit_to_app_white_24.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_exit_to_app_white_24.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_email_white_48.png.flat",
@@ -664,12 +664,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\icon_orange.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_chat_white_24.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_chat_white_24.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_folder_shared_white_24.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_folder_shared_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_chat_white_24.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_chat_white_24.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_email_white_36.png.flat",
@@ -704,16 +704,16 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-hdpi\\baseline_note_add_white_36.png"
     },
     {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_horizontal_split_white_36.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_horizontal_split_white_36.png"
+    },
+    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_exit_to_app_white_24.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xhdpi\\baseline_exit_to_app_white_24.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_horizontal_split_white_36.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_horizontal_split_white_36.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_library_add_white_48.png.flat",
@@ -816,12 +816,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\layout\\custom_spinner.xml"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_exit_to_app_white_18.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_exit_to_app_white_18.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_horizontal_split_white_18.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-mdpi\\baseline_horizontal_split_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_exit_to_app_white_18.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_exit_to_app_white_18.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_attach_money_white_18.png.flat",
@@ -848,12 +848,12 @@
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_chat_white_24.png"
     },
     {
-        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_horizontal_split_white_24.png.flat",
         "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_horizontal_split_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Hassani\\AndroidStudioProjects\\VaultPro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_settings_white_18.png.flat",
